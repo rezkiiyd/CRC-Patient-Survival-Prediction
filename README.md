@@ -59,7 +59,7 @@ To reproduce the results, it is recommended to use a virtual environment (e.g., 
 The entire experimental pipeline is consolidated into a single Jupyter Notebook for ease of reproduction.
 
 ### 1. Open the Notebook
-Navigate to `notebooks/CRC_Survival_Prediction_TabNet.ipynb` (or the name of your file).
+Navigate to `Source Code/CRC_Survival_Prediction_TabNet.ipynb`.
 
 ### 2. Run the Pipeline
 Execute the cells sequentially. The notebook performs the following steps in order:
