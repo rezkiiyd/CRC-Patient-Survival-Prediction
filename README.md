@@ -1,12 +1,109 @@
 # CRC-Patient-Survival-Prediction
 
+# Colorectal Cancer Patient Survival Prediction Using TabNet Model
+
+[![DOI](xxx)](xxx)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
 This repository contains the official implementation code for the paper:
 **"Colorectal Cancer Patient Survival Prediction Using TabNet Model"**
+
 Presented at the *2025 International Conference on Information and Communication Technology and Applications (ICICTyA)*.
 
 ## 📌 Project Overview
-This study develops an interpretable deep learning model using **TabNet** to predict the survival status (Alive/Dead) of Colorectal Cancer (CRC) patients based on clinical and demographic data. The model addresses class imbalance using the **Edited Nearest Neighbors (ENN)** resampling technique and provides transparency through attention mask visualization.
+
+Colorectal cancer (CRC) survival prediction is a critical task for optimizing clinical decision-making. However, many high-performing machine learning models function as "black boxes," hindering their adoption in medical settings.
+
+This study develops an **interpretable deep learning model** using **TabNet** to predict the survival status (Alive/Dead) of CRC patients. By leveraging a comprehensive dataset from the **SEER Program** (2018-2022), our approach combines robust predictive accuracy with native explainability.
+
+### Key Features:
+* **TabNet Architecture:** Utilizes sequential attention for instance-wise feature selection.
+* **Imbalance Handling:** Implements **Edited Nearest Neighbors (ENN)** resampling to effectively address class imbalance.
+* **Optimized Performance:** Achieves superior **Macro F1-Score (0.7710)** and **AUC (0.8885)** compared to standard baselines.
+* **Interpretability:** Provides global and local feature importance analysis, identifying **Primary Site**, **Clinical Grade**, and **Nodal Status** as key predictors.
+
+## 📂 Dataset Access
+
+The dataset used in this study is sourced from the **Surveillance, Epidemiology, and End Results (SEER) Program**.
+
+* **Source:** NCI SEER 17-Registries Research Data (Nov 2023 Submission).
+* **Cohort:** Patients diagnosed with CRC between 2018-2022.
+* **Inclusion Criteria:** `Primary Site` (180-209), `Histologic Type ICD-O-3` (8000-9000).
+* **Access Policy:** Due to the Data-Use Agreement (DUA), **we cannot distribute the raw data directly in this repository.** Researchers must request access directly from the official SEER website.
+    * [Request SEER Data Access](https://seer.cancer.gov/data/access.html)
+
 
 ## 🛠️ Installation & Requirements
-To reproduce the results, please install the required dependencies.
-It is recommended to use a virtual environment
+
+To reproduce the results, it is recommended to use a virtual environment (e.g., conda or venv).
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/username/repo-name.git](https://github.com/username/repo-name.git)
+    cd repo-name
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+**Key Dependencies:**
+* `pytorch-tabnet>=4.1.0`
+* `torch>=2.0.0`
+* `scikit-learn>=1.2.2`
+* `imbalanced-learn>=0.10.1`
+
+## 🚀 Usage Instructions
+
+The experiments are organized in sequential Jupyter Notebooks found in the `notebooks/` directory:
+
+| Notebook | Description |
+| :--- | :--- |
+| **1_Data_Preprocessing.ipynb** | Loads raw SEER data, performs cleaning (filtering codes), and applies Label Encoding. |
+| **2_Hyperparameter_Tuning.ipynb** | Runs Randomized Search CV (5-fold) to find optimal TabNet parameters on imbalanced data. |
+| **3_Resampling_Evaluation.ipynb** | Trains and compares models with different resampling strategies (None, SMOTE, ENN, SMOTE-ENN). |
+| **4_Final_Model_Analysis.ipynb** | Trains the final model (Tuned + ENN), evaluates on Test Set (AUC, F1, Brier Score, DeLong Test), and visualizes Feature Importance (Global). |
+
+## 📊 Model Card & Reproducibility
+
+### Model Configuration
+To ensure exact replication, use the following configuration found in our experiments:
+
+* **Random Seed:** `42`
+* **Optimal Hyperparameters:**
+    ```json
+    {
+      "n_d": 16,
+      "n_a": 10,
+      "n_steps": 6,
+      "gamma": 1.0,
+      "lambda_sparse": 0.000149,
+      "optimizer_params": {"lr": 0.0089},
+      "mask_type": "entmax"
+    }
+    ```
+* **Preprocessing:** Label Encoding for categorical features; ENN resampling for the training set.
+
+### Performance Metrics (Test Set)
+
+| Metric | Value | 95% CI (Bootstrap) |
+| :--- | :--- | :--- |
+| **AUC-ROC** | 0.8885 | 0.8803 – 0.8975 |
+| **Macro F1-Score** | 0.7710 | 0.7599 – 0.7825 |
+| **Accuracy** | 86.50% | - |
+| **PR-AUC (Dead Class)**| 0.3093 | 0.2885 – 0.3301 |
+| **Brier Score** | 0.1020 | - |
+
+## 📜 Citation
+
+If you use this code or our findings in your research, please cite our paper:
+
+```bibtex
+@inproceedings{Damayanti2025TabNet,
+  title={Colorectal Cancer Patient Survival Prediction Using TabNet Model},
+  author={Rezki Yulia Damayanti and Untari Novia Wisesty and Rita Rismala},
+  booktitle={2025 International Conference on Information and Communication Technology and Applications (ICICTyA)},
+  year={2025},
+  organization={IEEE}
+}
