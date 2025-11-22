@@ -56,14 +56,19 @@ To reproduce the results, it is recommended to use a virtual environment (e.g., 
 
 ## 🚀 Usage Instructions
 
-The experiments are organized in sequential Jupyter Notebooks found in the `notebooks/` directory:
+The entire experimental pipeline is consolidated into a single Jupyter Notebook for ease of reproduction.
 
-| Notebook | Description |
-| :--- | :--- |
-| **1_Data_Preprocessing.ipynb** | Loads raw SEER data, performs cleaning (filtering codes), and applies Label Encoding. |
-| **2_Hyperparameter_Tuning.ipynb** | Runs Randomized Search CV (5-fold) to find optimal TabNet parameters on imbalanced data. |
-| **3_Resampling_Evaluation.ipynb** | Trains and compares models with different resampling strategies (None, SMOTE, ENN, SMOTE-ENN). |
-| **4_Final_Model_Analysis.ipynb** | Trains the final model (Tuned + ENN), evaluates on Test Set (AUC, F1, Brier Score, DeLong Test), and visualizes Feature Importance (Global). |
+### 1. Open the Notebook
+Navigate to `notebooks/CRC_Survival_Prediction_TabNet.ipynb` (or the name of your file).
+
+### 2. Run the Pipeline
+Execute the cells sequentially. The notebook performs the following steps in order:
+
+* **Step 1: Data Preprocessing** (Cleaning, Filtering, Label Encoding)
+* **Step 2: Hyperparameter Tuning** (Randomized Search CV on imbalanced data)
+* **Step 3: Resampling Comparison** (Evaluating SMOTE, ENN, SMOTE-ENN vs Baseline)
+* **Step 4: Final Model Training** (Training TabNet with ENN and optimal parameters)
+* **Step 5: Evaluation & Interpretation** (Confusion Matrix, DeLong Test, Feature Importance)
 
 ## 📊 Model Card & Reproducibility
 
