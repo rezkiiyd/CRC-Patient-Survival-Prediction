@@ -8,7 +8,7 @@
 This repository contains the official implementation code for the paper:
 **"Colorectal Cancer Patient Survival Prediction Using TabNet Model"**
 
-Presented at the *2025 International Conference on Information and Communication Technology and Applications (ICICTyA)*.
+Presented at the *5th International Conference on Intelligent Cybernetics Technology & Applications 2025 (ICICyTA 2025)*.
 
 ## 📌 Project Overview
 
