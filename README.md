@@ -59,7 +59,7 @@ To reproduce the results, it is recommended to use a virtual environment (e.g., 
 The entire experimental pipeline is consolidated into a single Jupyter Notebook for ease of reproduction.
 
 ### 1. Open the Notebook
-Navigate to `Source Code/CRC_Survival_Prediction_TabNet.ipynb`.
+Navigate to `Source/Experiment_Colorectal_Cancer_Survival_2018_2022.ipynb`.
 
 ### 2. Run the Pipeline
 Execute the cells sequentially. The notebook performs the following steps in order:
