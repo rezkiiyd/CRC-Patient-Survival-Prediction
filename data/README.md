@@ -8,8 +8,9 @@ To reproduce the experiments, researchers must request access and download the d
 
 ## 1. Data Source
 * **Program:** Surveillance, Epidemiology, and End Results (SEER) Program.
-* **Database:** SEER 17-Registries Research Data (November 2023 Submission).
+* **Database:** Incidence - SEER Research Data, 17 Registries, Nov 2024 Sub (2000-2022).
 * **Link:** [Request SEER Data Access](https://seer.cancer.gov/data/access.html)
+* **Cite:** Surveillance, Epidemiology, and End Results (SEER) Program (www.seer.cancer.gov) SEER*Stat Database: Incidence - SEER Research Data, 17 Registries, Nov 2024 Sub (2000-2022), National Cancer Institute, DCCPS, Surveillance Research Program, released April 2025, based on the November 2024 submission.
 
 ## 2. How to Obtain the Data
 1.  **Register:** Sign the SEER Data-Use Agreement and obtain a username/password.
