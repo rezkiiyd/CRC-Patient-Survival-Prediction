@@ -105,10 +105,13 @@ To ensure exact replication, use the following configuration found in our experi
 If you use this code or our findings in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{Damayanti2025TabNet,
-  title={Colorectal Cancer Patient Survival Prediction Using TabNet Model},
-  author={Rezki Yulia Damayanti and Untari Novia Wisesty and Rita Rismala},
-  booktitle={2025 International Conference on Information and Communication Technology and Applications (ICICTyA)},
+@INPROCEEDINGS{11362595,
+  author={Damayanti, Rezki Yulia and Wisesty, Untari Novia and Rismala, Rita},
+  booktitle={2025 5th International Conference on Intelligent Cybernetics Technology & Applications (ICICyTA)}, 
+  title={Colorectal Cancer Patient Survival Prediction Using TabNet Model}, 
   year={2025},
-  organization={IEEE}
-}
+  volume={},
+  number={},
+  pages={143-148},
+  keywords={Deep learning;Decision support systems;Accuracy;Surveillance;Mortality;Colorectal cancer;Predictive models;Feature extraction;Data models;Tumors;colorectal cancer;survival prediction;TabNet;SEER;interpretability;clinical decision support},
+  doi={10.1109/ICICyTA68677.2025.11362595}}
