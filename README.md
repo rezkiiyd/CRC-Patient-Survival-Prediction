@@ -2,7 +2,7 @@
 
 # Colorectal Cancer Patient Survival Prediction Using TabNet Model
 
-[![DOI](https://doi.org/10.1109/ICICyTA68677.2025.11362595)
+[![DOI](https://doi.org/10.1109/ICICyTA68677.2025.11362595)]
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 This repository contains the official implementation code for the paper:
