@@ -39,8 +39,8 @@ To reproduce the results, it is recommended to use a virtual environment (e.g., 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/username/repo-name.git](https://github.com/username/repo-name.git)
-    cd repo-name
+    git clone [https://github.com/rezkiiyd/CRC-Patient-Survival-Prediction.git](https://github.com/rezkiiyd/CRC-Patient-Survival-Prediction.git)
+    cd CRC-Patient-Survival-Prediction
     ```
 
 2.  **Install dependencies:**
